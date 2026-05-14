@@ -1,0 +1,3 @@
+@echo off
+node -e "require('dotenv').config();const mongoose=require('mongoose');const Category=require('./src/models/Category');(async()=>{await mongoose.connect(process.env.MONGODB_URI);console.log('Connected to MongoDB');const result=await Category.deleteMany({name:{$in:['Critical Thinking','Media Literacy','Emotional Intelligence','Civic Engagement']}});console.log('Deleted',result.deletedCount,'old categories');const remaining=await Category.find().sort({name:1});console.log('Remaining categories:',remaining.length);remaining.forEach((c,i)=>console.log((i+1)+'.',c.icon,c.name));await mongoose.connection.close();process.exit(0);})().catch(e=>{console.error(e);process.exit(1);});"
+pause

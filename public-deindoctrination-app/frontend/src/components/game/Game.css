@@ -1,0 +1,497 @@
+/* ===== GAME HUD ===== */
+.game-viewport {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 70px);
+  overflow: hidden;
+  background: #000011;
+}
+
+/* Top Resource Bar */
+.hud-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(180deg, rgba(0,0,17,0.95) 0%, rgba(0,0,17,0) 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hud-resources {
+  display: flex;
+  gap: 1.25rem;
+  pointer-events: auto;
+}
+
+.hud-resource {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.hud-resource-icon {
+  font-size: 1.1rem;
+}
+
+.hud-resource-value {
+  display: block;
+  color: #e0e0e0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1.1;
+}
+
+.hud-resource-label {
+  display: block;
+  color: #888;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hud-player-stats {
+  display: flex;
+  gap: 1rem;
+  pointer-events: auto;
+}
+
+.hud-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #ccc;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0.5rem;
+}
+
+/* Left Panel */
+.hud-left-panel {
+  position: absolute;
+  top: 60px;
+  left: 12px;
+  width: 180px;
+  background: rgba(0,0,20,0.85);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.hud-panel-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.hud-empire-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.hud-empire-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hud-empire-label {
+  color: #888;
+  font-size: 0.75rem;
+}
+
+.hud-empire-value {
+  color: #e0e0e0;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+/* Notifications */
+.hud-notifications {
+  position: absolute;
+  top: 60px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.hud-notification {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  animation: slideIn 0.3s ease, fadeOut 0.5s ease 2.5s forwards;
+  backdrop-filter: blur(10px);
+}
+
+.hud-notification-info {
+  background: rgba(59,130,246,0.85);
+  color: white;
+  border: 1px solid rgba(59,130,246,0.5);
+}
+
+.hud-notification-success {
+  background: rgba(16,185,129,0.85);
+  color: white;
+  border: 1px solid rgba(16,185,129,0.5);
+}
+
+.hud-notification-warning {
+  background: rgba(245,158,11,0.85);
+  color: white;
+  border: 1px solid rgba(245,158,11,0.5);
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+
+/* ===== PLANET PANEL ===== */
+.planet-panel {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 300px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: rgba(0,0,20,0.92);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  z-index: 15;
+  backdrop-filter: blur(12px);
+  animation: panelSlideIn 0.25s ease;
+}
+
+@keyframes panelSlideIn {
+  from { transform: translateX(40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.planet-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.planet-panel-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.planet-panel-close {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #aaa;
+  font-size: 1rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.planet-panel-close:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+.planet-panel-status {
+  margin-bottom: 0.75rem;
+}
+
+.planet-status {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.planet-status.colonized { color: #00ff88; }
+.planet-status.uncolonized { color: #ff6b6b; }
+
+.planet-panel-resources h3,
+.planet-panel-structures h3 {
+  color: #ccc;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.planet-resource-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.planet-resource-bar {
+  display: grid;
+  grid-template-columns: 90px 1fr 30px;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.resource-bar-track {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.resource-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.planet-panel-structures {
+  margin-bottom: 0.75rem;
+}
+
+.planet-structure-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.5rem;
+  background: rgba(255,255,255,0.04);
+  border-radius: 0.35rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.structure-lvl {
+  color: #00ff88;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.planet-panel-action {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* ===== BOTTOM NAV BAR ===== */
+.game-bottom-nav {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(0,0,20,0.85);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1rem;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.game-nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  color: #aaa;
+  font-size: 0.65rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.game-nav-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border-color: rgba(255,255,255,0.15);
+}
+
+.game-nav-btn.active {
+  background: rgba(59,130,246,0.2);
+  color: #60a5fa;
+  border-color: rgba(59,130,246,0.3);
+}
+
+.game-nav-icon {
+  font-size: 1.3rem;
+}
+
+/* ===== TASK COMPLETION OVERLAY ===== */
+.task-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,17,0.6);
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.task-overlay-content {
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: rgba(10,10,30,0.95);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.task-overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.task-overlay-header h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.task-overlay-categories {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.task-cat-btn {
+  padding: 0.35rem 0.75rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: #aaa;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.task-cat-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.task-cat-btn.active {
+  background: rgba(59,130,246,0.25);
+  border-color: rgba(59,130,246,0.4);
+  color: #60a5fa;
+}
+
+.task-overlay-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-overlay-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 0.5rem;
+  transition: all 0.15s;
+}
+
+.task-overlay-item:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.task-overlay-info h4 {
+  color: #e0e0e0;
+  margin: 0 0 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+.task-overlay-info p {
+  color: #888;
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.task-overlay-rewards {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.task-complete-btn {
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border: none;
+  border-radius: 0.4rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.task-complete-btn:hover {
+  transform: scale(1.05);
+}
+
+.task-complete-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hud-top-bar {
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.4rem;
+  }
+  .hud-resources { gap: 0.5rem; }
+  .hud-left-panel { width: 150px; }
+  .planet-panel { width: 260px; }
+  .game-nav-btn { padding: 0.4rem 0.6rem; }
+}

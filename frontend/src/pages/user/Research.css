@@ -1,0 +1,101 @@
+.research-container { max-width: 100%; margin: 0 auto; padding: 0 1rem; }
+.research-header { margin-bottom: 2rem; }
+.research-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+.research-stats-bar {
+  display: flex; gap: 1.5rem; padding: 0.75rem 1rem;
+  background: white; border-radius: 0.5rem; margin-top: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-weight: 600;
+}
+.domain-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.domain-card {
+  background: white; border-radius: 0.75rem; padding: 1.25rem;
+  border-left: 4px solid; cursor: pointer; transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.domain-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.domain-card-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.domain-card h3 { font-size: 0.95rem; margin-bottom: 0.75rem; }
+.domain-progress-bar {
+  height: 6px; background: #e5e7eb; border-radius: 3px; overflow: hidden; margin-bottom: 0.4rem;
+}
+.domain-progress-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+.domain-progress-text { font-size: 0.75rem; color: #6b7280; }
+.domain-tier-text { font-size: 0.75rem; color: #9ca3af; display: block; }
+
+.tier-section { margin-bottom: 1.5rem; }
+.tier-title {
+  font-size: 1rem; color: #374151; margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb;
+}
+.node-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem;
+}
+.node-card {
+  background: white; border-radius: 0.5rem; padding: 0.75rem;
+  border-left: 3px solid; cursor: pointer; transition: all 0.15s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06); position: relative;
+}
+.node-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.node-status-dot {
+  width: 8px; height: 8px; border-radius: 50%; position: absolute; top: 0.75rem; right: 0.75rem;
+}
+.node-completed .node-status-dot { background: #10b981; }
+.node-available .node-status-dot { background: #f59e0b; }
+.node-researching .node-status-dot { background: #3b82f6; animation: pulse 1.5s infinite; }
+.node-locked .node-status-dot { background: #9ca3af; }
+.node-locked { opacity: 0.5; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.node-name { font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; padding-right: 1rem; }
+.node-meta { display: flex; gap: 0.75rem; font-size: 0.75rem; color: #6b7280; }
+
+.node-modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000;
+  display: flex; align-items: center; justify-content: center; padding: 1rem;
+}
+.node-modal {
+  background: white; border-radius: 0.75rem; max-width: 500px; width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.node-modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.25rem 1.5rem; border-bottom: 1px solid #e5e7eb;
+}
+.node-modal-header h2 { margin: 0; font-size: 1.1rem; }
+.node-modal-header button {
+  background: none; border: none; font-size: 1.25rem; cursor: pointer; color: #6b7280;
+}
+.node-modal-body { padding: 1.5rem; }
+.node-id { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.5rem; }
+.node-detail-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1rem;
+  padding: 1rem; background: #f9fafb; border-radius: 0.5rem;
+}
+.node-detail-grid div { display: flex; flex-direction: column; }
+.node-detail-grid span { font-size: 0.75rem; color: #6b7280; }
+.node-detail-grid strong { font-size: 0.95rem; }
+
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+  .research-container { padding: 0 0.5rem; }
+  .research-header h1 { font-size: 1.4rem; }
+  .research-stats-bar { gap: 0.75rem; font-size: 0.8rem; flex-wrap: wrap; }
+  .domain-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .domain-card { padding: 0.75rem; }
+  .domain-card-icon { font-size: 1.5rem; }
+  .domain-card h3 { font-size: 0.8rem; }
+  .node-grid { grid-template-columns: 1fr; }
+  .node-card { padding: 0.6rem; }
+  .node-modal { max-width: 95vw; }
+  .node-modal-header { padding: 0.75rem 1rem; }
+  .node-modal-body { padding: 1rem; }
+  .node-detail-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem; padding: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .domain-grid { grid-template-columns: 1fr; }
+  .research-stats-bar { font-size: 0.75rem; }
+}
