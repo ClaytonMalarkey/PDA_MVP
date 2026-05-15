@@ -4,7 +4,7 @@
   "description": "A gamified platform for developing critical thinking, media literacy, emotional intelligence, and civic engagement skills.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified wtf\" && exit 1",
     "deploy": "cd backend && npm install express && npm install cors && npm install && npm start && cd ../frontend && npm install && npm run build"
   },
   "repository": {
