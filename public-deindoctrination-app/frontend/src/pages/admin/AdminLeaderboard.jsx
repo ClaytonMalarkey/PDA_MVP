@@ -14,7 +14,7 @@ const AdminLeaderboard = () => {
   const fetchLeaderboard = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`196.75.153.172:5000/api/leaderboard?sortBy=${filter}`, {
+      const response = await fetch(`46.224.104.227:5000/api/leaderboard?sortBy=${filter}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

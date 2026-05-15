@@ -31,7 +31,7 @@ npm install
 npm run dev
 ```
 
-Access at: 196.75.153.172:5174
+Access at: 46.224.104.227:5174
 
 ## Login
 

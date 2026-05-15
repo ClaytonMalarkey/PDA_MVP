@@ -2,9 +2,9 @@
 
 ## Application URLs
 
-- **User Frontend**: 196.75.153.172:5173
-- **Admin Dashboard**: 196.75.153.172:5174
-- **Backend API**: 196.75.153.172:5000
+- **User Frontend**: 46.224.104.227:5173
+- **Admin Dashboard**: 46.224.104.227:5174
+- **Backend API**: 46.224.104.227:5000
 
 ## Default Admin Account
 
@@ -22,14 +22,14 @@ This is a regular user account with standard user privileges.
 
 ## How to Login
 
-### User Frontend (196.75.153.172:5173)
-1. Go to 196.75.153.172:5173/login
+### User Frontend (46.224.104.227:5173)
+1. Go to 46.224.104.227:5173/login
 2. Enter your email and password
 3. Click "Login"
 4. You'll be redirected to the dashboard
 
-### Admin Dashboard (196.75.153.172:5174)
-1. Go to 196.75.153.172:5174
+### Admin Dashboard (46.224.104.227:5174)
+1. Go to 46.224.104.227:5174
 2. Enter admin credentials (admin@example.com / Admin123!)
 3. Click "Login"
 4. You'll be redirected to the admin dashboard
@@ -57,7 +57,7 @@ This will recreate the admin user and sample data.
 ## Creating New Accounts
 
 ### Register a New User
-1. Go to 196.75.153.172:5173/register
+1. Go to 46.224.104.227:5173/register
 2. Enter your email
 3. Enter a password (minimum 8 characters with at least one number)
 4. Confirm your password

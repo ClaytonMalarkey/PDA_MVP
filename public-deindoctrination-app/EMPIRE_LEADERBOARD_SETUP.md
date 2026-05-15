@@ -35,8 +35,8 @@ Created script: `populateEmpireAndLeaderboard.js`
 
 ### 5. CORS Configuration
 Updated backend to allow both frontend ports:
-- `196.75.153.172:5173` - Main app
-- `196.75.153.172:5174` - Admin dashboard
+- `46.224.104.227:5173` - Main app
+- `46.224.104.227:5174` - Admin dashboard
 
 ## How to Use
 
@@ -73,9 +73,9 @@ node src/scripts/checkData.js
 - **Total Currency in System**: ~60,000
 
 ## Access URLs
-- **Main App**: 196.75.153.172:5173/
-- **Admin Dashboard (standalone)**: 196.75.153.172:5174/
-- **Backend API**: 196.75.153.172:5000/
+- **Main App**: 46.224.104.227:5173/
+- **Admin Dashboard (standalone)**: 46.224.104.227:5174/
+- **Backend API**: 46.224.104.227:5000/
 
 ## Login Credentials
 See `LOGIN_CREDENTIALS.md` for admin access.

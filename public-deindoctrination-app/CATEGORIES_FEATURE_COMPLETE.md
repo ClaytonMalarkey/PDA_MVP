@@ -91,7 +91,7 @@
 ### Access Categories Management
 
 1. **Login to Admin Dashboard**
-   - URL: http://localhost:5174
+   - URL: 46.224.104.227:5174
    - Email: `admin@example.com`
    - Password: `admin123`
 

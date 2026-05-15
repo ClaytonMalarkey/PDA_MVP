@@ -4,14 +4,14 @@
 This guide helps you verify that the Admin Dashboard correctly displays taskCheck values for imported tasks.
 
 ## Prerequisites
-✅ Backend server is running on 196.75.153.172:5000
-✅ Admin Dashboard is running on 196.75.153.172:5174
+✅ Backend server is running on 46.224.104.227:5000
+✅ Admin Dashboard is running on 46.224.104.227:5174
 ✅ Database contains 5000 tasks with taskCheck values (verified)
 
 ## Verification Steps
 
 ### Step 1: Access Admin Dashboard
-1. Open your browser and navigate to: **196.75.153.172:5174/**
+1. Open your browser and navigate to: **46.224.104.227:5174/**
 2. Log in with your admin credentials
 3. Navigate to the **Tasks** page from the sidebar
 

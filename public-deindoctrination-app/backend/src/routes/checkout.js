@@ -51,8 +51,8 @@ router.post('/stripe/:itemId', authenticate, async function(req, res) {
         quantity: 1,
       }],
       mode: 'payment',
-      success_url: (process.env.FRONTEND_URL || '196.75.153.172:5173') + '?purchase=success&item=' + req.params.itemId,
-      cancel_url: (process.env.FRONTEND_URL || '196.75.153.172:5173') + '?purchase=cancelled',
+      success_url: (process.env.FRONTEND_URL || '46.224.104.227:5173') + '?purchase=success&item=' + req.params.itemId,
+      cancel_url: (process.env.FRONTEND_URL || '46.224.104.227:5173') + '?purchase=cancelled',
       metadata: { userId: req.userId.toString(), itemId: req.params.itemId },
     });
 
@@ -104,8 +104,8 @@ router.post('/paypal/:itemId', authenticate, async function(req, res) {
         custom_id: req.userId.toString() + '|' + req.params.itemId,
       }],
       application_context: {
-        return_url: (process.env.FRONTEND_URL || '196.75.153.172:5173') + '?purchase=paypal_success',
-        cancel_url: (process.env.FRONTEND_URL || '196.75.153.172:5173') + '?purchase=cancelled',
+        return_url: (process.env.FRONTEND_URL || '46.224.104.227:5173') + '?purchase=paypal_success',
+        cancel_url: (process.env.FRONTEND_URL || '46.224.104.227:5173') + '?purchase=cancelled',
         brand_name: 'Space Out',
         user_action: 'PAY_NOW',
       }
@@ -182,8 +182,8 @@ router.post('/buy/:itemId', authenticate, async function(req, res) {
           payment_method_types: ['card'],
           line_items: [{ price_data: { currency: 'usd', product_data: { name: product.name }, unit_amount: Math.round(product.priceUSD * 100) }, quantity: 1 }],
           mode: 'payment',
-          success_url: (process.env.FRONTEND_URL || '196.75.153.172:5173') + '?purchase=success&item=' + req.params.itemId,
-          cancel_url: (process.env.FRONTEND_URL || '196.75.153.172:5173') + '?purchase=cancelled',
+          success_url: (process.env.FRONTEND_URL || '46.224.104.227:5173') + '?purchase=success&item=' + req.params.itemId,
+          cancel_url: (process.env.FRONTEND_URL || '46.224.104.227:5173') + '?purchase=cancelled',
           metadata: { userId: req.userId.toString(), itemId: req.params.itemId },
         });
         return res.json({ mode: 'stripe', url: session.url, sessionId: session.id });
@@ -207,7 +207,7 @@ router.post('/buy/:itemId', authenticate, async function(req, res) {
       request.requestBody({
         intent: 'CAPTURE',
         purchase_units: [{ amount: { currency_code: 'USD', value: product.priceUSD.toFixed(2) }, description: product.name, custom_id: req.userId.toString() + '|' + req.params.itemId }],
-        application_context: { return_url: (process.env.FRONTEND_URL || '196.75.153.172:5173') + '?purchase=paypal_success', cancel_url: (process.env.FRONTEND_URL || '196.75.153.172:5173') + '?purchase=cancelled', brand_name: 'Space Out', user_action: 'PAY_NOW' }
+        application_context: { return_url: (process.env.FRONTEND_URL || '46.224.104.227:5173') + '?purchase=paypal_success', cancel_url: (process.env.FRONTEND_URL || '46.224.104.227:5173') + '?purchase=cancelled', brand_name: 'Space Out', user_action: 'PAY_NOW' }
       });
       var order = await paypalClient.execute(request);
       var approveLink = order.result.links.find(function(l) { return l.rel === 'approve'; });

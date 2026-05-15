@@ -1,7 +1,7 @@
 require('dotenv').config();
 const axios = require('axios');
 
-const BASE_URL = '196.75.153.172:5000';
+const BASE_URL = '46.224.104.227:5000';
 
 async function testLeaderboardAPI() {
   try {

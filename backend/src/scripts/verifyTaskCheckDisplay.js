@@ -65,7 +65,7 @@ async function verifyTaskCheckDisplay() {
     console.log('MANUAL VERIFICATION CHECKLIST');
     console.log('='.repeat(70));
     console.log('\nTo complete Task 6.2, verify the following in Admin Dashboard:');
-    console.log('\n1. Open Admin Dashboard: 196.75.153.172:5174/');
+    console.log('\n1. Open Admin Dashboard: 46.224.104.227:5174/');
     console.log('2. Log in with admin credentials');
     console.log('3. Navigate to Tasks page');
     console.log('\n4. Verify taskCheck display for tasks WITH values:');
@@ -126,7 +126,7 @@ async function verifyTaskCheckDisplay() {
     console.log('\nNext Steps:');
     console.log('1. Ensure backend is running: npm start (in backend folder)');
     console.log('2. Ensure admin dashboard is running: npm run dev (in admin-dashboard folder)');
-    console.log('3. Open 196.75.153.172:5174/ in browser');
+    console.log('3. Open 46.224.104.227:5174/ in browser');
     console.log('4. Log in and navigate to Tasks page');
     console.log('5. Verify the checklist items above');
     console.log('6. Confirm Task 6.2 is complete\n');

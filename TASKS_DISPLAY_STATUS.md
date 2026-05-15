@@ -132,7 +132,7 @@ Should see: "Found 40 tasks"
 3. CORS issues
 
 **Solutions**:
-1. Check backend is running: `196.75.153.172:5000/health`
+1. Check backend is running: `46.224.104.227:5000/health`
 2. Logout and login again to refresh token
 3. Check backend CORS configuration
 
@@ -205,7 +205,7 @@ node src/scripts/verifyTasks.js
 node src/scripts/populateTasks.js
 
 # Check backend is running
-curl 196.75.153.172:5000/health
+curl 46.224.104.227:5000/health
 
 # Restart backend if needed
 # (Stop process 46 and start again)
@@ -213,10 +213,10 @@ curl 196.75.153.172:5000/health
 
 ## 🌐 URLs
 
-- **User Frontend**: 196.75.153.172:5173
-- **Admin Dashboard**: 196.75.153.172:5174
-- **Backend API**: 196.75.153.172:5000
-- **Health Check**: 196.75.153.172:5000/health
+- **User Frontend**: 46.224.104.227:5173
+- **Admin Dashboard**: 46.224.104.227:5174
+- **Backend API**: 46.224.104.227:5000
+- **Health Check**: 46.224.104.227:5000/health
 
 ---
 

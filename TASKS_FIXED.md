@@ -40,7 +40,7 @@
 
 ## How to Test
 
-### Test User Frontend (196.75.153.172:5173)
+### Test User Frontend (46.224.104.227:5173)
 
 1. **Login as a user**:
    - Email: `user@example.com`
@@ -62,7 +62,7 @@
    - Should see success message with rewards
    - Task should go on cooldown
 
-### Test Admin Dashboard (196.75.153.172:5174)
+### Test Admin Dashboard (46.224.104.227:5174)
 
 1. **Login as admin**:
    - Email: `admin@example.com`

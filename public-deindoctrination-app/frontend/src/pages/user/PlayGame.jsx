@@ -335,7 +335,7 @@ export default function PlayGame(){
   useEffect(()=>{
     const token=localStorage.getItem('token');
     if(!token)return;
-    const sock=socketIO('196.75.153.172:5000',{auth:{token},transports:['websocket','polling']});
+    const sock=socketIO('46.224.104.227:5000',{auth:{token},transports:['websocket','polling']});
     socketRef.current=sock;
     sock.on('connect',()=>console.log('🔌 MMO connected'));
     sock.on('players:nearby',(players)=>setOtherPlayers(players));

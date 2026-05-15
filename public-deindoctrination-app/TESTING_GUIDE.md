@@ -13,7 +13,7 @@
 ### 1. Access the Admin Dashboard
 
 1. Open your browser
-2. Navigate to: `196.75.153.172:5174`
+2. Navigate to: `46.224.104.227:5174`
 3. You should see the login page
 
 ### 2. Login as Admin
@@ -115,7 +115,7 @@ node src/scripts/populateEmpireAndLeaderboard.js
 **Solution**:
 - Backend should allow both ports 5173 and 5174
 - Check `backend/src/server.js` CORS configuration
-- Should include: `origin: ['196.75.153.172:5173', '196.75.153.172:5174']`
+- Should include: `origin: ['46.224.104.227:5173', '46.224.104.227:5174']`
 
 ## Debugging Steps
 
@@ -165,18 +165,18 @@ You can test the API endpoints directly using curl or a tool like Postman:
 
 ```bash
 # First, login to get a token
-curl -X POST 196.75.153.172:5000/api/auth/login \
+curl -X POST 46.224.104.227:5000/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"admin@example.com","password":"admin123"}'
 
 # Copy the token from the response, then:
 
 # Test leaderboard
-curl 196.75.153.172:5000/api/leaderboard \
+curl 46.224.104.227:5000/api/leaderboard \
   -H "Authorization: Bearer YOUR_TOKEN_HERE"
 
 # Test empire
-curl 196.75.153.172:5000/api/admin/empires \
+curl 46.224.104.227:5000/api/admin/empires \
   -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ```
 

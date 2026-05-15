@@ -227,7 +227,7 @@ Hold **M** while adjacent to an asteroid (brown circle) to mine it.
 
 ## 🌍 AR Explorer Mode (NEW!)
 
-Access via: **🌍 AR** in navbar or 196.75.153.172:5173/ar-explore
+Access via: **🌍 AR** in navbar or 46.224.104.227:5173/ar-explore
 
 ### How It Works
 - Uses your **real GPS location** and **device camera**

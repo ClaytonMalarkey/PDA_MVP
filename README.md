@@ -108,7 +108,7 @@ cd backend
 npm run dev
 ```
 
-Server will run on 196.75.153.172:5000
+Server will run on 46.224.104.227:5000
 
 2. Start the frontend development server:
 
@@ -117,7 +117,7 @@ cd frontend
 npm run dev
 ```
 
-Frontend will run on 196.75.153.172:5173
+Frontend will run on 46.224.104.227:5173
 
 ### Default Admin Credentials
 

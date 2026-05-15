@@ -12,8 +12,8 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
-    process.env.FRONTEND_URL || '196.75.153.172:5173',
-    '196.75.153.172:5174' // Admin dashboard
+    process.env.FRONTEND_URL || '46.224.104.227:5173',
+    '46.224.104.227:5174' // Admin dashboard
   ],
   credentials: true
 }));
@@ -145,7 +145,7 @@ connectDatabase()
     httpServer.listen(PORT, () => {
       console.log(`🚀 Server running on port ${PORT}`);
       console.log(`📊 Environment: ${process.env.NODE_ENV}`);
-      console.log(`🔗 Health check: 196.75.153.172:${PORT}/health`);
+      console.log(`🔗 Health check: 46.224.104.227:${PORT}/health`);
       console.log(`🔌 WebSocket: ws://localhost:${PORT}`);
     });
   })
