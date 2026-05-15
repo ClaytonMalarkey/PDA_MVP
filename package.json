@@ -1,0 +1,19 @@
+{
+  "name": "public-deindoctrination-app",
+  "version": "1.0.0",
+  "description": "A gamified platform for developing critical thinking, media literacy, emotional intelligence, and civic engagement skills.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaytonMalarkey/PDA_MVP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaytonMalarkey/PDA_MVP/issues"
+  },
+  "homepage": "https://github.com/ClaytonMalarkey/PDA_MVP#readme"
+}
