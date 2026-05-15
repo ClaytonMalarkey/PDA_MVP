@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified wtf\" && exit 1",
-    "deploy": "cd backend && npm install express && npm install cors && npm install dotenv && npm install && npm start && cd ../frontend && npm install && npm run build"
+    "deploy": "cd backend && npm install express && npm install cors && npm install dotenv && npm install mongoose && npm install && npm start && cd ../frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
