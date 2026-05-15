@@ -1,9 +1,9 @@
 # 🎮 SPACE OUT — Playable Game Cheat Sheet
 
 ## 🚀 Quick Start
-1. Open http://localhost:5173
+1. Open 96.75.153.172:5173
 2. Log in with your account
-3. Click **🎮 Play** in the navbar (or go to http://localhost:5173/play)
+3. Click **🎮 Play** in the navbar (or go to 96.75.153.172:5173/play)
 4. Use WASD to move, Space to shoot — you're playing!
 
 ---
@@ -227,7 +227,7 @@ Hold **M** while adjacent to an asteroid (brown circle) to mine it.
 
 ## 🌍 AR Explorer Mode (NEW!)
 
-Access via: **🌍 AR** in navbar or http://localhost:5173/ar-explore
+Access via: **🌍 AR** in navbar or 196.75.153.172:5173/ar-explore
 
 ### How It Works
 - Uses your **real GPS location** and **device camera**

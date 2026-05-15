@@ -30,7 +30,7 @@ const testEndpoints = async () => {
   try {
     // First, login to get a token
     console.log('1. Logging in as admin...');
-    const loginResponse = await makeRequest('http://localhost:5000/api/auth/login', {
+    const loginResponse = await makeRequest('196.75.153.172:5000/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: { email: 'admin@example.com', password: 'admin123' }
@@ -41,7 +41,7 @@ const testEndpoints = async () => {
 
     // Test leaderboard endpoint
     console.log('2. Testing leaderboard endpoint...');
-    const leaderboardResponse = await makeRequest('http://localhost:5000/api/leaderboard', {
+    const leaderboardResponse = await makeRequest('196.75.153.172:5000/api/leaderboard', {
       headers: { 'Authorization': `Bearer ${token}` }
     });
     console.log(`✅ Leaderboard: ${leaderboardResponse.data.length} users found`);
@@ -49,7 +49,7 @@ const testEndpoints = async () => {
 
     // Test empires endpoint
     console.log('3. Testing empires endpoint...');
-    const empiresResponse = await makeRequest('http://localhost:5000/api/admin/empires', {
+    const empiresResponse = await makeRequest('196.75.153.172:5000/api/admin/empires', {
       headers: { 'Authorization': `Bearer ${token}` }
     });
     console.log(`✅ Empires: ${empiresResponse.data.length} empires found`);

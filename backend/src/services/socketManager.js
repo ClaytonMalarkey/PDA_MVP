@@ -14,7 +14,7 @@ const userSockets = new Map(); // odId -> socket (latest)
 function init(httpServer) {
   io = new Server(httpServer, {
     cors: {
-      origin: [process.env.FRONTEND_URL || 'http://localhost:5173', 'http://localhost:5174'],
+      origin: [process.env.FRONTEND_URL || '196.75.153.172:5173', '196.75.153.172:5174'],
       credentials: true
     },
     pingInterval: 10000,

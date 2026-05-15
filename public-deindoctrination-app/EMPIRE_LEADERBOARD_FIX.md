@@ -48,7 +48,7 @@ npm run dev
 
 ### 2. Access Admin Dashboard
 
-1. Open browser to: `http://localhost:5175` (or the port shown in terminal)
+1. Open browser to: `196.75.153.172:5175` (or the port shown in terminal)
 2. Login with admin credentials:
    - Email: `admin@example.com`
    - Password: `admin123`

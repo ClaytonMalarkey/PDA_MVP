@@ -85,13 +85,13 @@
 ## How to View Tasks
 
 ### User Frontend (Port 5173)
-1. Login at `http://localhost:5173`
+1. Login at `196.75.153.172:5173`
 2. Navigate to **Tasks** page
 3. Filter by category
 4. Click on tasks to complete them
 
 ### Admin Dashboard (Port 5174)
-1. Login at `http://localhost:5174`
+1. Login at `196.75.153.172:5174`
 2. Navigate to **Tasks** page
 3. View all tasks
 4. Edit, activate, or deactivate tasks

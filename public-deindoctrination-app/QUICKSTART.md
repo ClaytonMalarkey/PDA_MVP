@@ -63,9 +63,9 @@ npm run dev
 
 ## Step 5: Access the App
 
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:5000
-- Health Check: http://localhost:5000/health
+- Frontend: 196.75.153.172:5173
+- Backend API: 196.75.153.172:5000
+- Health Check: 196.75.153.172:5000/health
 
 ## Login
 

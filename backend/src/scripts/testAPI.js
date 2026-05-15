@@ -3,7 +3,7 @@ const testEndpoints = async () => {
   try {
     // First login to get a token
     console.log('Testing login...');
-    const loginResponse = await fetch('http://localhost:5000/api/auth/login', {
+    const loginResponse = await fetch('196.75.153.172:5000/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -24,7 +24,7 @@ const testEndpoints = async () => {
     
     // Test leaderboard endpoint
     console.log('\nTesting leaderboard endpoint...');
-    const leaderboardResponse = await fetch('http://localhost:5000/api/leaderboard', {
+    const leaderboardResponse = await fetch('196.75.153.172:5000/api/leaderboard', {
       headers: { 'Authorization': `Bearer ${token}` }
     });
     
@@ -34,7 +34,7 @@ const testEndpoints = async () => {
     
     // Test empires endpoint
     console.log('\nTesting empires endpoint...');
-    const empiresResponse = await fetch('http://localhost:5000/api/admin/empires', {
+    const empiresResponse = await fetch('196.75.153.172:5000/api/admin/empires', {
       headers: { 'Authorization': `Bearer ${token}` }
     });
     

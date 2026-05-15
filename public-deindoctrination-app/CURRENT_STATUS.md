@@ -2,9 +2,9 @@
 
 ## Running Services
 
-✅ **Backend**: `http://localhost:5000`
-✅ **Main Frontend** (User): `http://localhost:5173`
-✅ **Admin Dashboard**: `http://localhost:5174`
+✅ **Backend**: 196.75.153.172:5000`
+✅ **Main Frontend** (User): `196.75.153.172:5173`
+✅ **Admin Dashboard**: `196.75.153.172:5174`
 
 ## What Was Fixed
 
@@ -29,7 +29,7 @@
 
 ### User-Facing Frontend (Port 5173)
 
-1. **Open**: `http://localhost:5173`
+1. **Open**: `196.75.153.172:5173`
 2. **Register/Login** as a regular user:
    - Use any of the test users: `user1@test.com` to `user7@test.com`
    - Password: `password123` (or register a new account)
@@ -44,7 +44,7 @@
 
 ### Admin Dashboard (Port 5174)
 
-1. **Open**: `http://localhost:5174`
+1. **Open**: `196.75.153.172:5174`
 2. **Login** as admin:
    - Email: `admin@example.com`
    - Password: `admin123`
@@ -150,7 +150,7 @@
 
 ## Next Steps
 
-1. Test user-facing leaderboard at `http://localhost:5173`
+1. Test user-facing leaderboard at `196.75.153.172:5173`
 2. If still empty, check browser console for errors
 3. Verify you're logged in as a user (not admin)
 4. Check that the response format matches expectations

@@ -13,7 +13,7 @@ const AdminEmpire = () => {
   const fetchEmpires = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/admin/empires', {
+      const response = await fetch('196.75.153.172:5000/api/admin/empires', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
