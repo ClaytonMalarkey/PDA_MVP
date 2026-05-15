@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy backend": "cd /backend; cd /src; npm run server.js",
-    "deploy fronend": "cd /frontend; npm run dev"
+    "deploy": "cd /backend;npm start; cd ..; cd /frontend; npm run dev"
   },
   "repository": {
     "type": "git",
